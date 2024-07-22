@@ -37,6 +37,13 @@ while running:
     ball_x += ball_dx
     ball_y += ball_dy
 
+#공 튕기기
+    if ball_x <= 0 or ball_x >= screen_width - ball_width:
+        ball_dx = -ball_dx #공의 x방향을 반전
+
+    if ball_y <= 0 or ball_y >= screen_height - ball_height:
+        ball_dy = -ball_dy #공의 y방향을 반전
+
 
     screen.fill(bbeige_marke)
 
